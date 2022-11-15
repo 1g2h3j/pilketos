@@ -204,21 +204,51 @@
 
             <div class="row text-center">
                 <div class="col-md-6 mt-3">
-                    <form action="{{ route('logout') }}" method="get">
-                        @csrf
-                        <button type="submit" class="btn btn-danger btn-l w-75">Back</button>
-                    </form>
+                    <button data-toggle="modal" data-target="#modalLogout" type="button" class="btn btn-danger btn-l w-75">Kembali</button>
                 </div>
 
                 <div class="col-md-6 mt-3">
                     <form action="{{ route('agreement') }}" method="post">
                         @csrf
-                        <button type="submit" class="btn btn-primary btn-l w-75">Next</button>
+                        <button type="submit" class="btn btn-primary btn-l w-75">Lanjut</button>
                     </form>
                 </div>
             </div>
 
+        </div>
+    </div>
 
+    <div class="modal fade" id="modalLogout" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalLogout" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLogout">Konfirmasi Ulang</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Apakah kamu yakin untuk keluar?</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="{{ route('logout') }}" method="get">
+                        @csrf
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-danger">Yakin</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 @stop
+
+@push('js')
+<script>
+    $(document).ready(function(){
+        $('#modalLogout').on('show.bs.modal', function(e){
+            var modal  = $(this);
+            var button = $(e.relatedTarget);
+        });
+    });
+</script>
+@endpush

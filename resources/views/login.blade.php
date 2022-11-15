@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PILKETOS</title>
-    {{-- <title>{{ ConfigVoting::getConfig()->title }} - {{ ConfigVoting::getConfig()->title_prefix }}</title> --}}
+    <title>{{ ConfigVoting::getConfig()->title }} - {{ ConfigVoting::getConfig()->title_prefix }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha512-iqRdf+0KMFmNZgdsA+8bz1MWIIXQBUCavPYVSVI83fcVfH2Y2PnNooLN04bgTNoUiQvIzidiIHJAcIP/uAEV9w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,16 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style id="in-login-style">
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-        }
-
-        .login_container {
-            padding: 0 2rem;
-        }
-
         body {
             background-image: url("{{ asset('images/static/bg.jpg') }}");
             background-repeat: no-repeat;
@@ -68,10 +57,10 @@
         <div class="wrapper">
             <div class="card">
                 <div class="text-container text-center">
-                    <h2 class="mt-4 text-bold"> <strong> Lorem, ipsum. </strong> </h2>
+                    <h2 class="mt-4 text-bold"> <strong> {{ ConfigVoting::getConfig()->title }} </strong> </h2>
                     <img src="{{ asset('images/static/logosmk.png') }}" class="text-center mt-3" alt="Logo"
                         height="230px">
-                    <h2 class="mt-4 text-bold"> <strong> Lorem, ipsum. </strong> </h2>
+                    <h2 class="mt-4 text-bold"> <strong> {{ ConfigVoting::getConfig()->title_prefix }} </strong> </h2>
                     <br>
                     <div class="d-flex justify-content-center">
                         <form method="post" action="{{ route('login') }}">

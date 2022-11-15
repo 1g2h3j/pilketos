@@ -8,7 +8,12 @@
 }
 
 body {
-  background-image: url("{{ asset('images/static/bg1.jpg') }}");
+  background-image: url("{{ asset('images/static/bg.jpg') }}");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -159,4 +164,10 @@ body {
 
 .form-agree {
   padding: 120px 0;
+}
+
+.lead {
+  text-align: center;
+  color: black;
+  font-weight: 400;
 }
