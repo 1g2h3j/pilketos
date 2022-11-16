@@ -28,7 +28,7 @@
          body {
             background-repeat: no-repeat;
             font-family: 'Poppins', sans-serif;
-            background:linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(7, 7, 7, 0.25)), url("{{ asset('images/static/bg golpud.png') }}");
+            background:linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(7, 7, 7, 0.25)), url("{{ asset('images/static/bg.jpg') }}");
       background-size:cover;
         }
     </style>

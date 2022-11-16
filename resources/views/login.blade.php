@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-4 login_container">
-                            <button type="submit" class="btn btn-primary rounded-4 p-3">MASUK</button>
+                            <button type="submit" class="btn btn-primary rounded-pill px-5 py-2">MASUK</button>
                         </div>
                     </form>
 
