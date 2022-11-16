@@ -1,8 +1,9 @@
 @extends('layouts.default')
 
-
+@section('headscript')
+@endsection
 @section('content')
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: gray;">
+{{-- <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: gray;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">KANDIDAT CALON  OSIS {{ ConfigVoting::getConfig()->periode }}</a>
     </div>
@@ -87,10 +88,99 @@
             <b>{{ strtoupper(ConfigVoting::getConfig()->title) }} <br> {{ strtoupper(ConfigVoting::getConfig()->title_prefix) }}</b>
         </p>
     </footer>
-</div>
-@stop
+</div> --}}
 
-@push('js')
+
+<div class="card bg">
+    <div class="card-body d-flex flex-row justify-content-evenly py-5 my-3">
+      <!-- card-paslon -->
+      <div class="card card-paslon d-flex align-items-center text-center" style="width: 18rem">
+        <div class="no-paslon">1</div>
+        <img src="{{ asset('images/static/Profile.png') }}" alt="photo-profile" width="120" class="pt-4" />
+        <div class="card-body">
+          <h5 class="card-title">Ketua</h5>
+          <p class="card-text">Nama Ketua (Kelas)</p>
+          <h5 class="card-title">Wakil Ketua</h5>
+          <p class="card-text">Nama Wakil Ketua (Kelas)</p>
+          <div class="row gap-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
+            <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
+            <button type="button" class="btn btn-primary col-11">PILIH</button>
+          </div>
+        </div>
+      </div>
+      <!--end card-paslon -->
+
+      <!-- modal visi -->
+      <div class="modal fade" id="visi" tabindex="-1" aria-labelledby="visiLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="visiLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end modal visi -->
+
+      <!-- modal misi -->
+      <div class="modal fade" id="misi" tabindex="-1" aria-labelledby="misiLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="misiLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end modal misi -->
+    </div>
+  </div>
+  <style scoped>
+    .no-paslon {
+      position: absolute;
+      padding: 14px 20px;
+      border-radius: 50%;
+      color: white;
+      background-color: black;
+      left: -20px;
+      top: -15px;
+    }
+    .card {
+      border: none !important;
+    }
+    .card.bg {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .card .card-paslon {
+      /* background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18); */
+    }
+  </style>
+@endsection
+
+@push('footscript')
 <script>
     $(document).ready(function(){
         $('#modalVisiMisi').on('show.bs.modal', function(e){
