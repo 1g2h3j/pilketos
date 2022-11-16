@@ -146,7 +146,7 @@
           </div>
         </div>
         <div class="row p-3 pt-0">
-            <div class="col-md-6 pb-md-0 pb-2"><button data-toggle="modal" data-target="#modalLogout" type="button" class="btn btn-danger btn-sm w-100">Kembali</button></div>
+            <div class="col-md-6 pb-md-0 pb-2"><button data-bs-toggle="modal" data-bs-target="#modalLogout" type="button" class="btn btn-danger btn-sm w-100">Kembali</button></div>
             <div class="col-md-6 text-md-end"><form action="{{ route('agreement') }}" method="post">
                 @csrf
                 <button type="submit" class="btn btn-primary btn-sm w-100">Lanjut</button>

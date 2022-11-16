@@ -65,9 +65,8 @@
 @section('footscript')
 
 <script>
-    $(document).ready(function () {
-        @error('login')
-        Swal.fire({
+    @error('login')
+        swal({
             icon: 'error',
             title: 'Login Gagal!',
             text: '{{ $message }}'
@@ -75,12 +74,10 @@
         @enderror
 
         @if(session() -> has('voting'))
-        Swal.fire({
+        swal({
             icon: 'success',
-            text: '{{ session('
-            voting ') }}'
+            text: '{{ session('voting') }}'
         });
         @endif
-    });
 </script>
 @endsection
