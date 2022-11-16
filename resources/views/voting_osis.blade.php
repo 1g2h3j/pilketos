@@ -209,6 +209,28 @@
 
 @push('footscript')
 <script>
+  @error('voting')
+        swal({
+            icon: 'error',
+            title: 'Error!',
+            text: '{{ $message }}'
+        });
+        @enderror
+
+        @if (session()->has('message'))
+        swal({
+            icon: 'info',
+            title: 'Welcome',
+            text: '{{ session("message") }}'
+        });
+        @endif
+
+        @if (session()->has('welcome'))
+        swal({
+            icon: 'success',
+            text: 'Selamat memilih!'
+        });
+        @endif
     $(document).ready(function(){
         $('#modalVisiMisi').on('show.bs.modal', function(e){
             var modal  = $(this);

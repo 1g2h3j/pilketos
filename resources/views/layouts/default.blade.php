@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/voting.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/static/logosmk.png') }}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @stack('css')
     @yield('headscript')
 </head>
