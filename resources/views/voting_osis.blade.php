@@ -177,14 +177,14 @@
         <h1 class="modal-title fs-5" id="misiLabel"><strong>MISI</strong></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body p-4 fst-italic">{!! $row->misi !!}
-      </div>
+      <div class="modal-body p-4 fst-italic">{!! $row->misi !!}</div>
 
     </div>
   </div>
 </div>
 <!--end modal misi -->
 @endforeach
+
 <style scoped>
   .no-paslon {
     position: absolute;
@@ -227,7 +227,7 @@
 
 @push('footscript')
 <script>
-  @error('voting')
+@error('voting')
   swal({
     icon: 'error',
     title: 'Error!',
@@ -275,7 +275,7 @@
     });
 
     @error('voting')
-    Swal.fire({
+    swal({
       icon: 'error',
       title: 'Error!',
       text: '{{ $message }}'
@@ -283,7 +283,7 @@
     @enderror
 
     @if(session() -> has('message'))
-    Swal.fire({
+    swal({
       icon: 'info',
       title: 'Welcome',
       text: '{{ session("message") }}'
@@ -291,7 +291,7 @@
     @endif
 
     @if(session() -> has('welcome'))
-    Swal.fire({
+    swal({
       icon: 'success',
       text: 'Selamat memilih!'
     });
