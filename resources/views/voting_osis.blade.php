@@ -105,13 +105,36 @@
       <div class="row gap-2 d-flex justify-content-center">
         <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi" data-visi="{!! $row->visi !!}">VISI</button>
         <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
-        <button type="button" class="btn btn-primary col-11">PILIH</button>
+        <button data-bs-toggle="modal" data-bs-target="#modalVoteKandidat" data-ketua="{{ $row->ketua }}" data-wakil="{{ $row->wakil }}" data-kandidat="{{ $row->id }}" type="button" class="btn btn-primary">PILIH</button>
       </div>
     </div>
   </div>
   </div>
-  @endforeach
   <!--end card-paslon -->
+  @endforeach
+</div>
+
+<div class="modal fade" id="modalVoteKandidat" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalVoteKandidatLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalVoteKandidatLabel">Konfirmasi Pemilihan</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <p class="lead">Dengan ini dengan penuh kesadaran dan dengan tanpa paksaan saya memilih <b><span id="paslon"></span></b> sebagai calon ketua dan wakil ketua OSIS {{ ConfigVoting::getConfig()->title_prefix }} untuk periode {{ ConfigVoting::getConfig()->periode }}.</p>
+          </div>
+          <div class="modal-footer">
+              <form action="{{ route('vote.osis') }}" method="post">
+                  @csrf
+                  <input type="hidden" id="kandidat-id" name="kandidat_id">
+                  <button type="submit" class="btn btn-primary">Konfirmasi Pemilihan</button>
+              </form>
+          </div>
+      </div>
+  </div>
 </div>
 
   @foreach($kandidat as $row)
