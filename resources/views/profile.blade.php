@@ -155,14 +155,13 @@
       </div>
     </div>
 
-      <div class="modal fade" id="modalLogout" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalLogout" aria-hidden="true">
+    <div class="modal fade" id="modalLogout" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="modalLogout" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalLogout">Konfirmasi Ulang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p class="lead">Apakah kamu yakin untuk keluar?</p>
@@ -170,7 +169,7 @@
                 <div class="modal-footer">
                     <form action="{{ route('logout') }}" method="get">
                         @csrf
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-danger">Yakin</button>
                     </form>
                 </div>
@@ -199,12 +198,12 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 @endsection
 
 @push('footscript')
-<script>
-    $(document).ready(function(){
-        $('#modalLogout').on('show.bs.modal', function(e){
-            var modal  = $(this);
-            var button = $(e.relatedTarget);
+    <script>
+        $(document).ready(function() {
+            $('#modalLogout').on('show.bs.modal', function(e) {
+                var modal = $(this);
+                var button = $(e.relatedTarget);
+            });
         });
-    });
-</script>
+    </script>
 @endpush
