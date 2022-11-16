@@ -4,9 +4,9 @@
 @section('content')
             <div class="card">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
-                    <h2><strong>Pemilihan Ketua & Wakil Ketua Osis</strong></h2>
+                    <h2><strong>{{ ConfigVoting::getConfig()->title }}</strong></h2>
                     <img src="{{ asset('images/static/logosmk.png') }}" class="text-center py-3" alt="Logo" width="180">
-                    <h2 class="mb-3"><strong> SMK Negeri 1 Bawang </strong></h2>
+                    <h2 class="mb-3"><strong> {{ ConfigVoting::getConfig()->title_prefix }} </strong></h2>
 
                     <form method="post" action="{{ route('login') }}">
                         @csrf
