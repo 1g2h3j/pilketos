@@ -92,66 +92,29 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <!-- card-paslon -->
+  @foreach($kandidat as $row)
   <div class="col d-flex justify-content-center">
   <div class="card h-100 card-paslon d-flex align-items-center text-center" style="width: 18rem">
-    <div class="no-paslon">1</div>
-    <img src="{{ asset('images/kandidat/osis/paslon_1.png') }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
+    <div class="no-paslon">{{ $row->paslon_no }}</div>
+    <img src="{{ asset($row->gambar) }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
     <div class="card-body">
       <h5 class="card-title fst-italic m-0">Ketua</h5>
-      <p class="card-text fw-bold">Veri Tri Ardiansyah (XI AKL 1)</p>
+      <p class="card-text fw-bold">{{ $row->ketua }}</p>
       <h5 class="card-title fst-italic m-0">Wakil Ketua</h5>
-      <p class="card-text fw-bold">Mariska Fitrianti (AKL 2)</p>
+      <p class="card-text fw-bold">{{ $row->wakil }}</p>
       <div class="row gap-2 d-flex justify-content-center">
-        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi" data-visi="{!! $row->visi !!}">VISI</button>
         <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
         <button type="button" class="btn btn-primary col-11">PILIH</button>
       </div>
     </div>
   </div>
   </div>
-  <div class="col d-flex justify-content-center">
-  <div class="card h-100 card-paslon d-flex align-items-center text-center" style="width: 18rem">
-    <div class="no-paslon">2</div>
-    <img src="{{ asset('images/kandidat/osis/paslon_2.png') }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
-    <div class="card-body">
-      <h5 class="card-title fst-italic m-0">Ketua</h5>
-      <p class="card-text fw-bold">Hasna Afra Kamilah (XI MPLB 1)</p>
-      <h5 class="card-title fst-italic m-0">Wakil Ketua</h5>
-      <p class="card-text fw-bold">Afifah Ahmad (X FS 1)</p>
-      <div class="row gap-2 d-flex justify-content-center">
-        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
-        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
-        <button type="button" class="btn btn-primary col-11">PILIH</button>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="col d-flex justify-content-center">
-  <div class="card h-100 card-paslon d-flex align-items-center text-center" style="width: 18rem">
-    <div class="no-paslon">3</div>
-    <img src="{{ asset('images/kandidat/osis/paslon_3.png') }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
-    <div class="card-body">
-      <h5 class="card-title fst-italic m-0">Ketua</h5>
-      <p class="card-text fw-bold">Anjani Laisya A. (XI AKL 1)</p>
-      <h5 class="card-title fst-italic m-0">Wakil Ketua</h5>
-      <p class="card-text fw-bold">Faiza Ajeng (AKL 2)</p>
-      <div class="row gap-2 d-flex justify-content-center">
-        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
-        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
-        <button type="button" class="btn btn-primary col-11">PILIH</button>
-      </div>
-    </div>
-  </div>
-  </div>
+  @endforeach
   <!--end card-paslon -->
 </div>
 
-<div class="row mt-5">
-  <div class="col d-flex justify-content-center">
-    <button class="btn btn-success px-5 shadow">Submit</button>
-  </div>
-</div>
-
+  @foreach($kandidat as $row)
   <!-- modal visi -->
   <div class="modal fade" id="visi" tabindex="-1" aria-labelledby="visiLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -160,7 +123,7 @@
           <h1 class="modal-title fs-5" id="visiLabel"><strong>VISI</strong></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body p-4 fst-italic"><p>Terwujudnya OSIS SMK Negeri 1 Bawang sebagai organisasi yang Demokratis, Dinamis dan Visioner, dengan menjunjung tinggi Asas Kekeluargaan.</p></div>
+        <div class="modal-body p-4 fst-italic"><p>{{ $row->visi }}</p></div>
         {{-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
         </div> --}}
@@ -177,19 +140,14 @@
           <h1 class="modal-title fs-5" id="misiLabel"><strong>MISI</strong></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body p-4 fst-italic">
-          <p>1. Meningkatkan ketaqwaan setiap siswa kepada Tuhan Yang Maha Esa.</p>
-          <p>2. Menjaga kehormatan antar seluruh warga sekolah dengan mengutamakan hak, kewajiban serta perlakuan dalam menyampaikan ide atau gagasan.</p>
-          <p>3. Menjadi penyalur aspirasi yang baik guna terciptanya keselarasan yang Demokratis.</p>
-          <p>4. Menjunjung tinggi moral serta memiliki dedikasi tinggi yang berlandaskan Nilai Kekeluargaan.</p>
-          <p>5. Bersikap adaptif serta instensif dalam berpikir dan bertindak.</p>
-          <p>6. Membangun OSIS SMK Negeri 1 Bawang dalam pacuan roda kepemimpinan yang positif kepada khalayak eksternal.</p>
+        <div class="modal-body p-4 fst-italic">{{ $row->misi }}
           </div>
        
       </div>
     </div>
   </div>
   <!--end modal misi -->
+  @endforeach
   <style scoped>
     .no-paslon {
       position: absolute;
