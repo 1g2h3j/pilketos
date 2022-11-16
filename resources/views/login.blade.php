@@ -2,8 +2,6 @@
 @section('headscript')
 @endsection
 @section('content')
-    <div class="row">
-        <div class="col">
             <div class="card">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
                     <h2><strong>Pemilihan Ketua & Wakil Ketua Osis</strong></h2>
@@ -35,24 +33,16 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-4 login_container">
-                            <button type="submit" class="btn btn-primary rounded-4">MASUK</button>
+                            <button type="submit" class="btn btn-primary rounded-4 p-3">MASUK</button>
                         </div>
                     </form>
 
                 </div>
             </div>
-        </div>
-    </div>
 
 <style scoped>
-    body {
-        background-image: url("{{ asset('images/static/bg.jpg') }}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
     .card {
+        color: whitesmoke;
         background: rgba(255, 255, 255, 0.2);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(8px);
@@ -60,7 +50,9 @@
         border-radius: 25px;
         border: none;
     }
-
+    label{
+        color: grey;
+    }
     .pt {
         padding-top: 11px;
     }

@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/voting.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/static/logosmk.png') }}">
     @stack('css')
@@ -26,13 +26,10 @@
     @yield('content')
     <style>
          body {
-            background-image: url("{{ asset('images/static/wp_.jpg') }}");
             background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
             font-family: 'Poppins', sans-serif;
+            background:linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(7, 7, 7, 0.25)), url("{{ asset('images/static/bg golpud.png') }}");
+      background-size:cover;
         }
     </style>
     </div>

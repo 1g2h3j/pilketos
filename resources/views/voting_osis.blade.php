@@ -90,92 +90,138 @@
     </footer>
 </div> --}}
 
-
-<div class="card bg">
-    <div class="card-body d-flex flex-row justify-content-evenly py-5 my-3">
-      <!-- card-paslon -->
-      <div class="card card-paslon d-flex align-items-center text-center" style="width: 18rem">
-        <div class="no-paslon">1</div>
-        <img src="{{ asset('images/static/Profile.png') }}" alt="photo-profile" width="120" class="pt-4" />
-        <div class="card-body">
-          <h5 class="card-title">Ketua</h5>
-          <p class="card-text">Nama Ketua (Kelas)</p>
-          <h5 class="card-title">Wakil Ketua</h5>
-          <p class="card-text">Nama Wakil Ketua (Kelas)</p>
-          <div class="row gap-2 d-flex justify-content-center">
-            <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
-            <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
-            <button type="button" class="btn btn-primary col-11">PILIH</button>
-          </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!-- card-paslon -->
+  <div class="col d-flex justify-content-center">
+  <div class="card h-100 card-paslon d-flex align-items-center text-center" style="width: 18rem">
+    <div class="no-paslon">1</div>
+    <img src="{{ asset('images/kandidat/osis/paslon_1.png') }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
+    <div class="card-body">
+      <h5 class="card-title fst-italic m-0">Ketua</h5>
+      <p class="card-text fw-bold">Veri Tri Ardiansyah (XI AKL 1)</p>
+      <h5 class="card-title fst-italic m-0">Wakil Ketua</h5>
+      <p class="card-text fw-bold">Mariska Fitrianti (AKL 2)</p>
+      <div class="row gap-2 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
+        <button type="button" class="btn btn-primary col-11">PILIH</button>
       </div>
-      <!--end card-paslon -->
-
-      <!-- modal visi -->
-      <div class="modal fade" id="visi" tabindex="-1" aria-labelledby="visiLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="visiLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--end modal visi -->
-
-      <!-- modal misi -->
-      <div class="modal fade" id="misi" tabindex="-1" aria-labelledby="misiLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="misiLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--end modal misi -->
     </div>
   </div>
+  </div>
+  <div class="col d-flex justify-content-center">
+  <div class="card h-100 card-paslon d-flex align-items-center text-center" style="width: 18rem">
+    <div class="no-paslon">2</div>
+    <img src="{{ asset('images/kandidat/osis/paslon_2.png') }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
+    <div class="card-body">
+      <h5 class="card-title fst-italic m-0">Ketua</h5>
+      <p class="card-text fw-bold">Hasna Afra Kamilah (XI MPLB 1)</p>
+      <h5 class="card-title fst-italic m-0">Wakil Ketua</h5>
+      <p class="card-text fw-bold">Afifah Ahmad (X FS 1)</p>
+      <div class="row gap-2 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
+        <button type="button" class="btn btn-primary col-11">PILIH</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col d-flex justify-content-center">
+  <div class="card h-100 card-paslon d-flex align-items-center text-center" style="width: 18rem">
+    <div class="no-paslon">3</div>
+    <img src="{{ asset('images/kandidat/osis/paslon_3.png') }}" alt="photo-profile" width="120" class="pt-4 rounded-circle" />
+    <div class="card-body">
+      <h5 class="card-title fst-italic m-0">Ketua</h5>
+      <p class="card-text fw-bold">Anjani Laisya A. (XI AKL 1)</p>
+      <h5 class="card-title fst-italic m-0">Wakil Ketua</h5>
+      <p class="card-text fw-bold">Faiza Ajeng (AKL 2)</p>
+      <div class="row gap-2 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#visi">VISI</button>
+        <button type="button" class="btn btn-primary col-5" data-bs-toggle="modal" data-bs-target="#misi">MISI</button>
+        <button type="button" class="btn btn-primary col-11">PILIH</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--end card-paslon -->
+</div>
+
+<div class="row mt-5">
+  <div class="col d-flex justify-content-center">
+    <button class="btn btn-success px-5 shadow">Submit</button>
+  </div>
+</div>
+
+  <!-- modal visi -->
+  <div class="modal fade" id="visi" tabindex="-1" aria-labelledby="visiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="visiLabel"><strong>VISI</strong></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 fst-italic"><p>Terwujudnya OSIS SMK Negeri 1 Bawang sebagai organisasi yang Demokratis, Dinamis dan Visioner, dengan menjunjung tinggi Asas Kekeluargaan.</p></div>
+        {{-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div> --}}
+      </div>
+    </div>
+  </div>
+  <!--end modal visi -->
+
+  <!-- modal misi -->
+  <div class="modal fade" id="misi" tabindex="-1" aria-labelledby="misiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="misiLabel"><strong>MISI</strong></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 fst-italic">
+          <p>1. Meningkatkan ketaqwaan setiap siswa kepada Tuhan Yang Maha Esa.</p>
+          <p>2. Menjaga kehormatan antar seluruh warga sekolah dengan mengutamakan hak, kewajiban serta perlakuan dalam menyampaikan ide atau gagasan.</p>
+          <p>3. Menjadi penyalur aspirasi yang baik guna terciptanya keselarasan yang Demokratis.</p>
+          <p>4. Menjunjung tinggi moral serta memiliki dedikasi tinggi yang berlandaskan Nilai Kekeluargaan.</p>
+          <p>5. Bersikap adaptif serta instensif dalam berpikir dan bertindak.</p>
+          <p>6. Membangun OSIS SMK Negeri 1 Bawang dalam pacuan roda kepemimpinan yang positif kepada khalayak eksternal.</p>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+  <!--end modal misi -->
   <style scoped>
     .no-paslon {
       position: absolute;
-      padding: 14px 20px;
+      /* padding: 30px 15px 8px 30px; */
+      padding: 65px 25px 15px 76px;
       border-radius: 50%;
+      font-size: 1.5rem;
       color: white;
-      background-color: black;
-      left: -20px;
-      top: -15px;
+      background-color: #0d6dfc;
+      left: -60px;
+      top: -55px;
+      box-shadow: 0 8px 32px 0 rgba(6, 6, 6, 0.3);
     }
     .card {
       border: none !important;
     }
-    .card.bg {
-      background: rgba(255, 255, 255, 0.2);
+    .card {
+      color: whitesmoke;
+      background: rgba(200, 200, 200, 0.37);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
     .card .card-paslon {
-      /* background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18); */
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+    }
+    .modal-body p{
+      margin-bottom: 0.5rem;
+      /* letter-spacing: 0.5px; */
+      font-weight: 200 !important;
     }
   </style>
 @endsection
